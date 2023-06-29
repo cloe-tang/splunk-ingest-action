@@ -133,3 +133,25 @@ Step 3: Verify in the S3. The IP address should be masked
 
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/190c7b0f-0c42-4c06-8c99-9952b6030a92)
 
+## Additional Information
+
+1. If you are using IAM role as your authentication method, make sure that you have the following permission
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::BucketNameHere",
+                "arn:aws:s3:::BucketNameHere/*"
+            ]
+        }
+    ]
+}
+```
+2. If you have transformation configured in the heavy forwarder, the ingest action happens after the transform.
