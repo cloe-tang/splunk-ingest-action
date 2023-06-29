@@ -121,6 +121,13 @@ Step 4: Click on "+ Add Rule" and select "Route to Destination". In this rule, r
 
 Step 5: There should be 4 rules in total. Click on "Save"
 
+## Verify Result
 
+Step 1: Pump some new data with IP address into the logs you are monitoring
 
+Step 2: Verify in the indexer. The IP address should not be masked
+
+<img width="949" alt="image" src="https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/938c8a3b-c846-48ea-9abe-487b908dbac1">
+
+Step 3: Verify in the S3. The IP address should be masked
 
