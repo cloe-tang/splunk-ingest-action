@@ -68,4 +68,34 @@ Step 12: You will see the rule set added.
 
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/700da7c0-ad4f-4bed-b065-4ac9c8a8efb7)
 
+## Verify result
+
+Step 1: Navigate to your S3 bucket. You should see a json file created in the following directory. Note that in version 9.1, you can choose to have sourcetype name as part of the directory. 
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/8a788877-2a30-4a1a-8e6f-7965c8523378)
+
+In version 9.0, the following is how the S3 partition looks like
+
+<img width="536" alt="image" src="https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/3ed2af73-0623-4c3a-836a-a4560cdb85cb">
+
+In version 9.1, you have the option to partition with the sourcetype
+
+<img width="794" alt="image" src="https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/b5b078e7-36b8-41f4-9985-cb0ffaf48d73">
+
+The filename for both version will be as follows:
+
+```
+events_{LT}_{ET}_{file_create_epoch}_{32b_seq_num}_{peer_guid}.{format_ext}{.compression_ext}
+```
+
+Step 2: Download and open the json file from S3. The Json file should look something like the following for version 9.0
+
+<img width="1036" alt="image" src="https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/dd9f0794-1699-43de-b7fe-e5397f102f81">
+
+In version 9.1, you have the option to save it in raw, JSON or New line delimited json
+
+<img width="982" alt="image" src="https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/954a91d8-183d-40d9-9484-b801f57c4160">
+
+Step 3: Verify that the data is also going into Splunk Indexer. 
+
 
