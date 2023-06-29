@@ -30,7 +30,7 @@ Step 2: Click on "Destinations" to configure the S3 enpoint. Click on "New Desti
 
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/bcfb9915-0388-467e-aefd-82ba0135a694)
 
-Step 3: Choose your authentication method. There are 2 options: "Access key and secret key" and "IAM Role". In this case, I'm using Access key and secret key. If the access key and secret key provided is correct, you should see "Successfully connected to the server" upon clicking on "Test Connection".
+Step 3: Choose your authentication method. There are 2 options: "Access key and secret key" and "IAM Role". In this case, I'm using Access key and secret key. If the access key and secret key provided is correct, you should see "Successfully connected to the server" upon clicking on "Test Connection". If you are using IAM role, please refer to the Additional Information section for the permission required.
 
 <img width="516" alt="image" src="https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/e655301d-2622-4402-9bb7-6a01ec7ff153">
 
@@ -135,7 +135,7 @@ Step 3: Verify in the S3. The IP address should be masked
 
 ## Additional Information
 
-1. If you are using IAM role as your authentication method, make sure that you have the following permission
+1. If you are using IAM role as your authentication method for S3, make sure that you have the following permission
 ```
 {
     "Version": "2012-10-17",
