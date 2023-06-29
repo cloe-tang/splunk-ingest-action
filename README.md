@@ -56,4 +56,7 @@ Step 9: Click on "+ Add Rule". Select "Route to Destination"
 
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/c839ebb4-4375-4f11-8b64-aa963e12b895)
 
-Step 10: By default, you will see "Default Destination"
+Step 10: By default, you will see "Default Destination" added. That is the splunk indexer. If you remove it, the data will not be forwarded to splunk indexer. Hence for any sourcetype you intercept in ingest action, you will need to include "Default Destination" if you want to forward to splunk indexer as well. 
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/00180a56-714c-41b0-9a39-dd8e10cd9cdb)
+
