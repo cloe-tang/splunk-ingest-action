@@ -98,4 +98,29 @@ In version 9.1, you have the option to save it in raw, JSON or New line delimite
 
 Step 3: Verify that the data is also going into Splunk Indexer. 
 
+## Masking IP for data going to S3
+
+Step 1: Edit the rule_cyberark ruleset. Remove the AWS S3 under Route to Destination
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/1297cfd9-a70c-4ed5-93b6-a4b500613912)
+
+Step 2: Click on "+ Add Rule". Select "Mask with regular expression"
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/cd87b166-3ee6-4bc2-aad3-7e1a3e7b5604)
+
+Step 3: Enter the regex for IP address and the replace expression
+
+```
+([01]?\d\d?|2[0-4]\d|25[0-5])(?:\.(?:[01]?\d\d?|2[0-4]\d|25[0-5])){3}(?:/[0-2]\d|/3[0-2])?
+```
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/0b7dc447-ebf5-4e60-aa86-318320ed7756)
+
+Step 4: Click on "+ Add Rule" and select "Route to Destination". In this rule, remove "Default destination" and add "AWS S3"
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/ec73be57-8e40-40bd-9b03-74fe6525a827)
+
+Step 5: There should be 4 rules in total. Click on "Save"
+
+
+
 
