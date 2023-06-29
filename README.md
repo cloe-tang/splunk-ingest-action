@@ -60,3 +60,12 @@ Step 10: By default, you will see "Default Destination" added. That is the splun
 
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/00180a56-714c-41b0-9a39-dd8e10cd9cdb)
 
+Step 11: Add the S3 destination in. Once done, click on "Save"
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/35f97da3-bab9-4f58-af00-ed923574f83a)
+
+Step 12: You will see the rule set added. 
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/700da7c0-ad4f-4bed-b065-4ac9c8a8efb7)
+
+
