@@ -131,3 +131,5 @@ Step 2: Verify in the indexer. The IP address should not be masked
 
 Step 3: Verify in the S3. The IP address should be masked
 
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/190c7b0f-0c42-4c06-8c99-9952b6030a92)
+
