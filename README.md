@@ -20,7 +20,7 @@ Step 2: Click on the new bucket created. Create a folder within the bucket to st
 
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/95771a85-cb9e-4acc-a6ed-08fd024e174c)
 
-## Part 2 - Configure ingest action in heavy forwarder
+## Part 2 - Configure ingest action in heavy forwarder forwarding to S3
 
 Step 1: Navigate to the ingest action page
 
@@ -34,7 +34,26 @@ Step 3: Choose your authentication method. There are 2 options: "Access key and 
 
 <img width="516" alt="image" src="https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/e655301d-2622-4402-9bb7-6a01ec7ff153">
 
+Step 4: Under "Advanced Options", make sure to configure according to your S3 bucket setting. 
 
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/6ff2946a-7915-44d0-b912-d7aca77f95ef)
 
+Step 5: Ingest Action sends data in batches based on either the size of the data or the time whichever that comes first. The default setting for batch timeout is 30 seconds and batch size threshold is 2MB. This setting can changed under the "Advanced Options".
 
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/b40bf137-9108-4acd-85a7-e9b66e6deced)
 
+Step 6: Once configuration is completed, click on "Save". 
+
+Step 7: Click on "Rulesets" then "New Ruleset".
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/cf855140-e093-4eca-8484-1f2b54ff79bb)
+
+Step 8: Give the Ruleset a name. Under Event Stream, select the sourcetype which you want to send to S3.
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/3421d452-0702-4b4b-be5c-fa51a9311ba0)
+
+Step 9: Click on "+ Add Rule". Select "Route to Destination"
+
+![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/c839ebb4-4375-4f11-8b64-aa963e12b895)
+
+Step 10: By default, you will see "Default Destination"
