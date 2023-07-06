@@ -157,4 +157,4 @@ Step 3: Verify in the S3. The IP address should be masked
 }
 ```
 2. If you have transformation configured in the heavy forwarder, the ingest action happens after the transform.
-3. Once sourcetype is intercepted, you have to specify all destination you would like the route the data to including the Default Destination. 
+3. Once sourcetype is intercepted by ingest action ruleset, you have to specify all destination you would like the route the data to including the Default Destination. 
