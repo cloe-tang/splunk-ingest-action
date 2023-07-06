@@ -98,7 +98,7 @@ In version 9.1, you have the option to save it in raw, JSON or New line delimite
 
 Step 3: Verify that the data is also going into Splunk Indexer. 
 
-## Masking IP for data going to S3
+## Masking IP for data going to S3. Data going to Splunk Enterprise unmask
 
 Step 1: Edit the rule_cyberark ruleset. Remove the AWS S3 under Route to Destination
 
@@ -120,6 +120,8 @@ Step 4: Click on "+ Add Rule" and select "Route to Destination". In this rule, r
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/ec73be57-8e40-40bd-9b03-74fe6525a827)
 
 Step 5: There should be 4 rules in total. Click on "Save"
+
+** Note that you need to have 2 "Route to Destination" rule. One to Splunk Enterprise with IP unmasked and the other to S3 with IP masked. If you do not have the first "Route to Destination" set to Default Destination, data will not be going to Splunk Enterpise. 
 
 ## Verify Result
 
@@ -155,3 +157,4 @@ Step 3: Verify in the S3. The IP address should be masked
 }
 ```
 2. If you have transformation configured in the heavy forwarder, the ingest action happens after the transform.
+3. Once sourcetype is intercepted, you have to specify all destination you would like the route the data to including the Default Destination. 
