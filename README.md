@@ -68,7 +68,7 @@ Step 12: You will see the rule set added.
 
 ![image](https://github.com/cloe-tang/splunk-ingest-action/assets/58005106/700da7c0-ad4f-4bed-b065-4ac9c8a8efb7)
 
-## Verify result
+## Part 3 - Verify result
 
 Step 1: Navigate to your S3 bucket. You should see a json file created in the following directory. Note that in version 9.1, you can choose to have sourcetype name as part of the directory. 
 
@@ -98,7 +98,7 @@ In version 9.1, you have the option to save it in raw, JSON or New line delimite
 
 Step 3: Verify that the data is also going into Splunk Indexer. 
 
-## Masking IP for data going to S3. Data going to Splunk Enterprise unmask
+## Part 4 - Masking IP for data going to S3. Data going to Splunk Enterprise unmask
 
 Step 1: Edit the rule_cyberark ruleset. Remove the AWS S3 under Route to Destination
 
@@ -123,7 +123,7 @@ Step 5: There should be 4 rules in total. Click on "Save"
 
 ** Note that you need to have 2 "Route to Destination" rule. One to Splunk Enterprise with IP unmasked and the other to S3 with IP masked. If you do not have the first "Route to Destination" set to Default Destination, data will not be going to Splunk Enterpise. 
 
-## Verify Result
+## Part 5 - Verify Result
 
 Step 1: Pump some new data with IP address into the logs you are monitoring
 
